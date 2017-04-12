@@ -1,10 +1,9 @@
 ################################################################
 ## MSVS
 
-/build
-/src/**/obj/
-/test/**/obj/
-/thirdparty/**/**/obj/
+**/obj/
+**/Debug/
+**/Release/
 /tmp
 
 # User-specific files
