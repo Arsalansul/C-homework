@@ -6,23 +6,24 @@ namespace HelloWorld
     {
         static void Main()
         {
-            Console.WriteLine("Hello Deathpool gamers!");
-            Console.WriteLine();
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-
-            int a;
-            a = 5;
-            int b, c;
-            bool d;
-            d = true;
+            int a =5;
+            byte f = 1;
+            double d;
+            d = f;
             long e = 10;
-            float f = 5.5f;
+            f = (byte)a;
             char g = 'g';
 
             Console.WriteLine(a);
+            Console.WriteLine(d);
+            Console.WriteLine(f);
             Console.ReadKey();
+
+            const byte hour = 24;
+            //hour = 1;
+            Console.WriteLine(hour);
+            Console.ReadKey();
+
         }
     }
 }
