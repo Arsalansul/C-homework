@@ -17,26 +17,27 @@ namespace lesson_6
 
             //вторая задача
             bool b = false;
-            string[] password;
+            string password ="root";
             while (b == false)
             {
                 Console.WriteLine("введите пароль");
-                password = Console.ReadLine();
-                if()
+                string password1 = Console.ReadLine();
+                if(password1 == password)
+                    b= true;
+
             }
             Console.WriteLine("спасибо!");
 
             //третья задача
 
-
-            int[] numbers = {1,2,3,4,5,6,7,8,9 };
-            int s=0;
-            for (int i = 0; i < numbers.Length; i++ )
-                s += numbers[i];
-            Console.WriteLine(s);
+            int[] m1 = {1,2,3,4,5,6,7,8,9,10}, m2 = {1,2,3,4,5,6,7,8,9,10}, m3 = new int[10];
+           
+            for (int i = 0; i < 10; i++)
+            {
+                m3[i] = m1[i] + m2[i];
+                Console.Write(m3[i]);
+            }
             Console.ReadKey();
-
-            bool b = false;
 
         }
     }
