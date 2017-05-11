@@ -18,9 +18,10 @@ namespace otgadai_chislo
                     {
                         var Number = Convert.ToInt32(Console.ReadLine());
 
-                        if (Number > 20 || Number < 1) Console.WriteLine("Число должно быть от 1 до 20. Повтори попытку: ");
-
-                        else return Number;
+                        if (Number > 20 || Number < 1) 
+                            Console.WriteLine("Число должно быть от 1 до 20. Повтори попытку: ");
+                        else 
+                            return Number;
                     }
                     catch
                     {
@@ -37,13 +38,19 @@ namespace otgadai_chislo
                 return false;            
         }
 
+        
+
         static void Main(string[] args)
         {
             Random rnd1 = new Random();
             int CompNumber = rnd1.Next(1, 21);
             Console.WriteLine(CompNumber);
+            Console.WriteLine("Загадай число");
             int MyNumber=Move();
             int Number;
+            List<int> CompNumbers= new List<int>(){1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+            int Numbers = 19;
+
             bool MyMove = false;
             bool End = false;
             while (!End)
@@ -54,11 +61,15 @@ namespace otgadai_chislo
                     Number = Move();
                     MyMove=false;
                     End = Proverka(Number, CompNumber);
-
                 }
                 else
                 {
-                    Number=rnd1.Next(1, 21);
+
+                    int Index = rnd1.Next(0, Numbers);
+                    Number = CompNumbers[Index];
+                    CompNumbers.RemoveAt(Index);                   
+                    Numbers--;     
+                    
                     Console.WriteLine("Очередь второго игрока. Его попытка " + Number);
                     End = Proverka(Number, MyNumber);
                     MyMove=true;
