@@ -49,7 +49,7 @@ namespace otgadai_chislo
             int MyNumber=Move();
             int Number;
             List<int> CompNumbers= new List<int>(){1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-            int Numbers = 19;
+            int Numbers = 20;
 
             bool MyMove = false;
             bool End = false;
@@ -64,7 +64,6 @@ namespace otgadai_chislo
                 }
                 else
                 {
-
                     int Index = rnd1.Next(0, Numbers);
                     Number = CompNumbers[Index];
                     CompNumbers.RemoveAt(Index);                   
