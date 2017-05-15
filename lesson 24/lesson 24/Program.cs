@@ -67,7 +67,7 @@ namespace lesson_24
             HisMoney--;
             Console.WriteLine("у меня " + MyMoney);
 
-            
+            Console.WriteLine(3714 + 13171);
             Console.ReadKey();
         }
     }
